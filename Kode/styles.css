@@ -1,0 +1,635 @@
+/*----------------------------------
+               RESET
+----------------------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/*----------------------------------
+               FARVER
+----------------------------------*/
+:root {
+    --Hvid: (#fff);
+    --LysGul: (#FFF2AB);
+    --MørkGul: (#F4CD1D);
+    --LysLilla: (#A199D2);
+}
+
+/*----------------------------------
+               ROOT
+----------------------------------*/
+.k2d-bold {
+    font-family: "K2D", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: "K2D", sans-serif;
+    color: #fff;
+}
+
+h1 {
+    font-size: 90px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/* home ikon */
+.home_knap {
+    width: 100px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+/* pile frem og tilbage */
+.pile_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 75%;
+    margin-top: 680px;
+}
+
+.piltilbage_flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pilfrem_flex {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/*----------------------------------
+               START
+----------------------------------*/
+/* baggrundbillede */
+#startside {
+    background-image: url(IMG/startbaggrundsbillede.webp);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* farve på ordet "stjerne" */
+.stjerne-farve {
+    color: var(--MørkGul);
+}
+
+/* gradient text for modern browsers */
+@supports (background-clip: text) {
+
+    .stjerne-farve,
+    .home_knap {
+        background-image: linear-gradient(60deg, #FFF2AB, #F4CD1D);
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+/* Små stjerner fastsat et sted */
+.småStjerner {
+    position: absolute;
+    top: 85px;
+    left: 250px;
+    z-index: -1;
+}
+
+/* Karakteren */
+#startKarakter {
+    width: 800px;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+/* start her knap */
+#start-start {
+    position: absolute;
+    bottom: 60px;
+    right: 140px;
+    font-size: 90px;
+    font-weight: 700;
+    color: var(--MørkGul);
+}
+
+/* gradient text for modern browsers */
+@supports (background-clip: text) {
+    #start-start {
+        background-image: linear-gradient(0deg, #F4CD1D, #FFF2AB);
+        background-clip: text;
+        color: transparent;
+        text-decoration: underline 5px #F4CD1D;
+    }
+}
+
+/*----------------------------------
+                HJEM
+----------------------------------*/
+/* baggrundbillede */
+#hjemside {
+    background-image: url(IMG/baggrundsbillede.webp);
+    background-size: cover;
+}
+
+#main {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.h2hjem {
+    font-size: 45px;
+    font-weight: 250;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/*Div med de 3 bobler*/
+.slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+/*Hver enkelt boble m. skrift*/
+.item {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    text-align: justify;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 250px);
+    top: 0;
+    text-align: center;
+}
+
+.item h2 {
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.bobbelHjemImg {
+    height: auto;
+    width: 400px;
+    border: 5px solid transparent;
+    background: linear-gradient(#f4cd10, #fff2ab, #A199D2) padding-box, linear-gradient(to top, #f4cd10, #fff2ab, #A199D2) border-box;
+    border-radius: 100%;
+}
+
+
+/* frem og tilbage pile */
+#next,
+#prev {
+    position: absolute;
+    bottom: 2%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-weight: bold;
+    left: 35%;
+}
+
+#next {
+    left: unset;
+    right: 35%;
+}
+
+/* frem og tilbage usynlige knapper */
+#fremadTryk {
+    width: 500px;
+    height: 500px;
+    background: transparent;
+    position: absolute;
+    top: 50px;
+    right: 70px;
+}
+
+#tilbageTryk {
+    width: 500px;
+    height: 500px;
+    background: transparent;
+    position: absolute;
+    top: 50px;
+    left: 70px;
+}
+
+
+/* Start spil knap */
+.start_ptp {
+    font-size: 70px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--LysGul);
+    background-image: linear-gradient(270deg, #fff2ab, #f4cd10);
+    background-clip: text;
+    color: transparent;
+    text-decoration: underline 5px #F4CD1D;
+}
+
+/*----------------------------------
+         PRIK TIL PRIK START 
+----------------------------------*/
+/* baggrundbillede */
+#ptp {
+    background-image: url(IMG/baggrundsbillede.webp);
+    background-size: cover;
+}
+
+/* overskrift: beskrivelse */
+.h2_pstart {
+    font-size: 45px;
+    font-weight: 250;
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* h3 overskrift: stjernebillederne */
+.prikstart_h3 {
+    font-size: 45px;
+    text-align: center;
+}
+
+/* flexbox + position af boblerne */
+.flex_pstart_karlsvognen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+}
+
+.flex_pstart_orion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 430px;
+    bottom: 50px;
+}
+
+.flex_pstart_dragen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 430px;
+    top: 200px;
+}
+
+.flex_pstart_cassiopeia {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+}
+
+/* boblerne: billeder og ringe  */
+.img_pstart_karlsvognen {
+    border-radius: 100%;
+    width: 320px;
+    height: auto;
+    border: 5px solid transparent;
+    background: linear-gradient(#f4cd10, #fff2ab, #A199D2) padding-box, linear-gradient(to top, #f4cd10, #fff2ab, #A199D2) border-box;
+}
+
+.img_pstart_orion {
+    border-radius: 100%;
+    width: 320px;
+    height: auto;
+    border: 5px solid transparent;
+    background: linear-gradient(#f4cd10, #fff2ab, #A199D2) padding-box, linear-gradient(to top, #f4cd10, #fff2ab, #A199D2) border-box;
+}
+
+.img_pstart_dragen {
+    border-radius: 100%;
+    width: 320px;
+    height: auto;
+    border: 5px solid transparent;
+    background: linear-gradient(#f4cd10, #fff2ab, #A199D2) padding-box, linear-gradient(to top, #f4cd10, #fff2ab, #A199D2) border-box;
+}
+
+.img_pstart_cassiopeia {
+    border-radius: 100%;
+    width: 320px;
+    height: auto;
+    border: 5px solid transparent;
+    background: linear-gradient(#f4cd10, #fff2ab, #A199D2) padding-box, linear-gradient(to top, #f4cd10, #fff2ab, #A199D2) border-box;
+}
+
+/*----------------------------------
+            PRIK TIL PRIK
+----------------------------------*/
+/* pile frem og tilbage */
+.pile_flex_ptp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    width: 97%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+
+
+/*----------------------------------
+           FIND OG LÆR
+----------------------------------*/
+/* baggrundbillede */
+#find_side {
+    background-image: url(IMG/baggrundsbillede.webp);
+    background-size: cover;
+}
+
+/* Stjernebilledernes position */
+.orion_img {
+    position: absolute;
+    left: 70px;
+    bottom: 30px;
+}
+
+.karlsv_img {
+    position: absolute;
+    left: 200px;
+    bottom: 300px;
+}
+
+.cassiopeia_img {
+    position: absolute;
+    right: 300px;
+    bottom: 20px;
+}
+
+.drage_img {
+    position: absolute;
+    right: 130px;
+    bottom: 300px;
+}
+
+/*----------------------------------
+        FIND OG LÆR: ORION
+----------------------------------*/
+/* baggrundbillede */
+#findorion {
+    background-image: url(IMG/baggrundsbillede.webp);
+    background-size: cover;
+}
+
+/* stjernebilledet */
+.orion {
+    position: absolute;
+    right: 130px;
+    top: 80px;
+    width: 400px;
+}
+
+
+.orion_h1 {
+    color: black;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+.orion_p {
+    color: black;
+    margin-top: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 19px;
+    font-weight: 200;
+    padding-bottom: 10px;
+}
+
+ul li {
+    padding-bottom: 20px;
+}
+
+.text_orion {
+    background-color: yellow;
+    position: absolute;
+    top: 150px;
+    left: 180px;
+    width: 38%;
+    height: auto;
+    background: linear-gradient(#ffffff, #FFF2AB) padding-box, linear-gradient(to top, #ffffff, #fff2ab) border-box;
+    opacity: 70%;
+    border-radius: 10px;
+}
+
+.video_test {
+    z-index: 1;
+    position: absolute;
+    right: 180px;
+    top: 300px;
+    width: 800px;
+}
+
+/*----------------------------------
+        FIND OG LÆR: KARLSVOGNEN
+----------------------------------*/
+
+.karlsvognen {
+    position: absolute;
+    left: 730px;
+    top: 40px;
+    width: 750px;
+}
+
+.text_karlsvognen {
+    background-color: yellow;
+    position: absolute;
+    top: 150px;
+    left: 180px;
+    width: 38%;
+    height: auto;
+    background: linear-gradient(#ffffff, #FFF2AB) padding-box, linear-gradient(to top, #ffffff, #fff2ab) border-box;
+    opacity: 70%;
+    border-radius: 10px;
+}
+
+/*----------------------------------
+       FIND OG LÆR: DRAGEN 
+----------------------------------*/
+.dragen {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 500px;
+    z-index: 3;
+}
+
+.text_dragen {
+    background-color: yellow;
+    position: absolute;
+    top: 100px;
+    left: 180px;
+    width: 38%;
+    height: auto;
+    background: linear-gradient(#ffffff, #FFF2AB) padding-box, linear-gradient(to top, #ffffff, #fff2ab) border-box;
+    opacity: 70%;
+    border-radius: 10px;
+}
+
+/*----------------------------------
+       FIND OG LÆR: CASSIOPEIA
+----------------------------------*/
+.cassiopeia {
+    position: absolute;
+    left: 850px;
+    top: 100px;
+    width: 550px;
+}
+
+/*----------------------------------
+            QUIZ START
+----------------------------------*/
+/* baggrundbillede */
+#quizstart {
+    background-image: url(IMG/baggrundsbillede.webp);
+    background-size: cover;
+}
+
+.startquiz_knap {
+    font-size: 70px;
+    font-weight: 700;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--LysGul);
+    background-image: linear-gradient(270deg, #fff2ab, #f4cd10);
+    background-clip: text;
+    color: transparent;
+    text-decoration: underline 5px #F4CD1D;
+
+}
+
+/* Stjernebilledernes position */
+.quiz_orion_img {
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
+}
+
+.quiz_karlsv_img {
+    position: absolute;
+    right: 720px;
+    bottom: 80px;
+}
+
+.quiz_cassiopeia_img {
+    position: absolute;
+    right: 280px;
+    bottom: 20px;
+}
+
+.quiz_drage_img {
+    position: absolute;
+    right: 70px;
+    bottom: 250px;
+}
+
+/*----------------------------------
+            QUIZ 1-8
+----------------------------------*/
+#quiz {
+    max-width: 900px;
+    margin: 50px auto;
+    border-radius: 5px;
+}
+
+/* baggrundbillede */
+#quizSideStart {
+    background-image: url(IMG/baggrundsbillede.webp);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#question {
+    font-family: "K2D", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--Hvid);
+    font-size: 50px;
+}
+
+#options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 50px;
+    column-gap: 80px;
+    margin-top: 100px;
+    text-align: justify;
+}
+
+button {
+    width: 400px;
+    /* Ændret til 100% for at fylde containerens bredde */
+    height: auto;
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 30px;
+    background: linear-gradient(#ffffff, #FFF2AB) padding-box, linear-gradient(to top, #ffffff, #fff2ab) border-box;
+    opacity: 75%;
+    text-align: left;
+    color: rgba(8, 6, 91, 1);
+}
+
+.result-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.prøvigen_quiz_knap {
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: var(--LysGul);
+    background-image: linear-gradient(270deg, #fff2ab, #f4cd10);
+    background-clip: text;
+    color: transparent;
+    text-decoration: underline 5px #F4CD1D;
+}

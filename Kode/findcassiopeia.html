@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <!-- Meta description-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Stjernebilleder" content="Spil og lær om stjernebilleder">
+    <meta name="keywords"
+        content="stjernebillede, astronomi, stjernetegn, spil, animation, museum, Steno museet, quiz, videnskab, mytologi, stjerner, mælkevejen, rummet, verdenssyn, eventyr, opdagelser, interaktion">
+    <meta name="author"
+        content="Amalie Sofie Tobar Petersen, Mette Fonnesbæk, Nikoline Hald Juul-Nyholm, Tobias Alexander Korup">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Javascript -->
+    <script src="scrpit.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kaisei+Decol:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="IMG/favicon.png">
+    <!-- Sidens titel -->
+    <title>FIND OG LÆR OM CASSIOPEIA</title>
+</head>
+
+<body id="findorion">
+    <!-- Home knap -->
+    <a href="hjem.html"> <img class="home_knap" src="IMG/homeicon.png" alt="home"></a>
+
+    <main>
+        <!-- Stjernebillede af cassiopeia -->
+        <img class="cassiopeia" src="IMG/cassiopeia.png" alt="orion">
+
+        <!-- Tekstboks -->
+        <div class="text_dragen">
+            <!-- Overskrift -->
+            <h1 class="orion_h1">Cassiopeia</h1>
+            <!-- Fakta om stjernebilledet -->
+            <ul class="orion_p">
+                <li>Kan ses hele året på den nordlige halvkugle. </li>
+                <li>Opkaldt efter Cassiopeia, der var gift med Etiopiens konge, Cephus. </li>
+                <li>Cassiopeia pralede af datteren, Andromedas skønhed og mente at hun var smukkere end Poseidons døtre.
+                </li>
+                <li>Poseidon sendte et havmonster efter Etiopien som hævn. </li>
+                <li>Cassiopeia rådførte sig et orakel som hjælp, der fortalte at hun skulle ofre datteren til
+                    havmonsteret. </li>
+                <li>Den græske helt, Perseus, reddede Andromeda i sidste øjeblik, men Poseidon var stadig hævntørstig -
+                    derfor straffede han Cassiopeia ved at placere hende på himlen bundet fast til en stol. </li>
+            </ul>
+        </div>
+
+        <!-- Karakter fortæller om cassiopeia -->
+        <video class="video_test" id="videoLoop" autoplay>
+            <source src="VIDEO/cassiopeia.mov" type="video/mp4">
+        </video>
+
+
+        <!-- Pile frem og tilbage -->
+        <div class="pile_flex">
+            <div class="piltilbage_flex">
+                <a href="findstart.html"> <img class="pil_tilbage" src="IMG/pil_tilbage.png" alt="pil"></a>
+                <p>Tilbage til <br>FIND OG LÆR</p>
+            </div>
+            <div class="pilfrem_flex">
+                <a href="quizstart.html"> <img class="pil_frem" src="IMG/pil_frem.png" alt="pil"></a>
+                <p>Videre til <br>QUIZ</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

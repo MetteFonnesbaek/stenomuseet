@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <!-- Meta description-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Stjernebilleder" content="Spil og lær om stjernebilleder">
+    <meta name="keywords"
+        content="stjernebillede, astronomi, stjernetegn, spil, animation, museum, Steno museet, quiz, videnskab, mytologi, stjerner, mælkevejen, rummet, verdenssyn, eventyr, opdagelser, interaktion">
+    <meta name="author"
+        content="Amalie Sofie Tobar Petersen, Mette Fonnesbæk, Nikoline Hald Juul-Nyholm, Tobias Alexander Korup">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Javascript -->
+    <script src="scrpit.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kaisei+Decol:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="IMG/favicon.png">
+    <!-- Sidens titel -->
+    <title>FIND OG LÆR OM ORION</title>
+</head>
+
+<body id="findorion">
+    <!-- Home knap -->
+    <a href="hjem.html"> <img class="home_knap" src="IMG/homeicon.png" alt="home"></a>
+
+    <main>
+        <!-- Stjernebillede af Orion -->
+        <img class="orion" src="IMG/Orion.png" alt="orion">
+
+        <!-- Tekstboks -->
+        <div class="text_orion">
+            <!-- Overskrift -->
+            <h1 class="orion_h1">Orion</h1>
+            <!-- Fakta om stjernebilledet -->
+            <ul class="orion_p">
+                <li>
+                    I græsk mytologi blev Orion betragtet som en jæger, der blev placeret på himlen som et
+                    stjernebillede efter sin død. Orion havde held i både jagt og kærlighed og var far til 50 sønner.
+                    Orion var en søn
+                    af Poseidon, guden for havet. </li>
+                <li>Orions bælte er en af de mest genkendelige og fremtrædende stjerneformationer på himlen. </li>
+                <li>Sammen danner disse stjerner silhuetten af en jæger, der holder et sværd. </li>
+                <li>Med sine tre klare stjerner på linje er bæltet i Orion let at finde på stjernehimlen </li>
+                <li>Orion har været et vigtigt navigationspunkt for søfarere og folk på land gennem historien. </li>
+            </ul>
+        </div>
+
+        <!-- Karakter fortæller om orion -->
+        <video class="video_test" id="videoLoop" autoplay>
+            <source src="VIDEO/orion.mov" type="video/mp4">
+        </video>
+
+        <!-- Pile frem og tilbage -->
+        <div class="pile_flex">
+            <div class="piltilbage_flex">
+                <a href="findstart.html"> <img class="pil_tilbage" src="IMG/pil_tilbage.png" alt="pil"></a>
+                <p>Tilbage til <br>FIND OG LÆR</p>
+            </div>
+            <div class="pilfrem_flex">
+                <a href="findkarlsvognen.html"> <img class="pil_frem" src="IMG/pil_frem.png" alt="pil"></a>
+                <p>Videre til <br> KARLSVOGNEN</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
