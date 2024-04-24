@@ -1,0 +1,4 @@
+Robot.txt
+	User-agent: Googlebot 
+	User-agent: AdsBot-Google 
+	Disallow: / 
